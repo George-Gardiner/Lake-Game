@@ -13,7 +13,7 @@ from journal import journal
 
 # vars
 running = True
-sd = 160, 160  # screen dimensions (x, y) || 80, 80 or multiple of is best
+sd = 500, 500 # screen dimensions (x, y) || 80, 80 or multiple of is best
 lf = t()  # last frame
 fc = 0  # frame count
 maps = []  # map1: main, map2: collision...
@@ -146,7 +146,7 @@ def collect():
     return False
 
 
-Rs = [collectable((5, 6), "mapDat/imgs/lake/W", ts, mfps, collect)]
+Rs = [collectable((5, 6), "mapDat/imgs/1/!", ts, mfps, collect)]
 
 mainGame()
 
