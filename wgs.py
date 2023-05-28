@@ -18,7 +18,12 @@ def inSquare(x, y, sq1, sq2): # great for buttons or collisions
     return False
 
 def round(x, y):
-  return int(div(x,y))*y
+    print(x*y)
+    print(propR(x*y))
+    return div(propR(x*y), y)
+
+def propR(x): # proper round, round to the closest half
+    return int(x+.5)
 
 class toggle:
   def __init__(self, togState=None):
