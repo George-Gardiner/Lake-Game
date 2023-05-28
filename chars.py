@@ -6,17 +6,12 @@ from wgs import rf  # read file
 from math import ceil as ru  # round up
 from math import floor as rd  # round down
 from math import fabs as abs
+from wgs import inSquare as iS
 
 """
-#here is the code, chage the code as u want george
-  #while True:
-   # events = pygame.event.get()
-    #   if(event.type == pygame.QUIT):
-       #     pygame.quit()
-      #      quit() # we need to save
      #   if(event.type == pygame.KEYDOWN):
         #    if(event.key == pygame.K_LEFT):
-         #       x_2 = -10
+         #       x_2 = -10 # is this momentum or something?
           #      y_2 = 0
            # elif(event.key == pygame.K_RIGHT):
             #    x_2 = 10
@@ -133,6 +128,10 @@ class btn(sprite):
         self.collision, self.scp, self.ecp = [startPos,
                                               endPos], startPos, endPos  # start collision position, end collision position
 
+    def isPressed(self, mousePos):
+        if iS(mousePos[0], mousePos[1], self.scp, self.ecp):
+            return True
+        return False
 
 # ___________________________________________________________________________________________________________________________________
 
