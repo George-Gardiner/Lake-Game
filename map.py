@@ -1,9 +1,9 @@
 from chars import animatedSprite
-from wgs import div, rf
+from wgs import div, rf, round
 from math import ceil as ru
 from math import floor as rd
 
-sd, mfps, cm, ts = 0, 0, 0, 0
+sd, mfps, cm, ts = None, None, None, None
 
 
 def init(x, y, z):
@@ -28,9 +28,8 @@ class cmo:  # collision map object
 
     def move(self, pos, x=None, y=None):
         pos = [pos[0] - 2, pos[1] - 2]
-        print(pos[1], "::", rd(-pos[1]), ru(-pos[1]))
         if x is None:
-            x = 0
+            pass
         elif x > 0:
             if not (self.fl[rd(-pos[1])][-rd(pos[0]) - 1] == "-" or self.fl[ru(-pos[1])][-rd(pos[0]) - 1] == "-"):
                 pos[0] += x
@@ -39,14 +38,13 @@ class cmo:  # collision map object
                 pos[0] += x
 
         if y is None:
-            y = 0
+            pass
         elif y < 0:
             if not (self.fl[-ru(pos[1]) + 1][-rd(pos[0])] == "-" or self.fl[-ru(pos[1]) + 1][-ru(pos[0])] == "-"):
                 pos[1] += y
         elif y > 0:
             if not (self.fl[-rd(pos[1]) - 1][-rd(pos[0])] == "-" or self.fl[-rd(pos[1]) - 1][-ru(pos[0])] == "-"):
                 pos[1] += y
-
         return [pos[0] + 2, pos[1] + 2]
 
     def isColliding(self, pos):
@@ -86,6 +84,7 @@ class mo:  # map object
     def getgms(self):
         return len(self.tL[0]) / 5, len(self.tL) / 5
 
+
     def isAnim(self, x):
         if x in self.animations:
             return ""
@@ -123,35 +122,7 @@ class mo:  # map object
             right = 0
         if down is None:
             down = 0
-        print(right, ":::::", down)
-        print(self.location[0] - cm.move(self.location, -right, -down)[0],
-              self.location[1] - cm.move(self.location, -right, -down)[1])
         self.location = cm.move(self.location, -right, -down)
 
     def getPos(self):
         return self.location
-
-
-"""
-def maps():
-    return ["grass", "maze", "blank", "basic.dat"], ["grass", "smile", "blank", "basic.dat"], ["grass", "map", "blank", "basic.dat"], "end"  # Just so that you can import a var with a star (from map import *)
-
-def loadChars(map):
-    file = open("imgs/maps/"+map, "r")
-    f = file.read().split("\n")
-    out = [(1, 1), []]
-    for y in range(len(f)):
-        for x in range(len(f[y])):
-            if f[y][x] == "P":
-                out = [(x, y), []]
-
-    for y in range(len(f)):
-        for x in range(len(f[y])):
-            if f[y][x] in ["W", "J"]:
-                out[1].append((et[f[y][x]], True, x, y))
-                print(x, y)
-            elif f[y][x] in []:
-                out[1].append((et[f[y][x]], False))
-
-    return out
-"""

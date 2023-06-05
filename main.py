@@ -99,13 +99,13 @@ def mainGameKeyBinds():
             book.draw(bg)
         else:
             if keys[pg.K_s]:
-                map.ml(down=0.05)
+                map.ml(down=0.0625)
             if keys[pg.K_w]:
-                map.ml(down=-0.05)
+                map.ml(down=-0.0625)
             if keys[pg.K_d]:
-                map.ml(right=0.05)
+                map.ml(right=0.0625)
             if keys[pg.K_a]:
-                map.ml(right=-0.05)
+                map.ml(right=-0.0625)
 
 
 def mainGame():  # put char movement here
