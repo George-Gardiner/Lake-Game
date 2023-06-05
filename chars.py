@@ -157,88 +157,9 @@ class char(sprite):
         else:
             self.setImg(self.imgFile + dir, self.ts)
 
-    def dd(self, damage):  # deal damage
-        if self.mhp <= damage and self.pos == self.chp:
-            self.chp = 1
-        else:
-            self.chp -= damage
-
 
 class player(char):
     def __init__(self, ts, sp=None):
         if sp is None:
             sp = 0, 0
         self.pos = sp  # tile location, not pixel location
-
-
-"""  Not Neccessary but still avaliable:
-# An enemy class (yes, I know I don't need a "#")
-
-class enemy(char):
-    def __init__(self, sp, ts, dataFile):
-        file = open("pDat/{}/main.dat".format(dataFile), "r")
-        f = file.read().split("\n")
-        file.close()
-        super().__init__(int(f[1]), sp, f[0], ts)
-        self.sp = sp # spawn position
-        self.df = "pDat/" + dataFile + "/"
-        self.ld = []
-        self.md = []
-        self.hd = []
-        playerPos = "nothing"
-        f = open(self.df + "attack.dat")
-        file = f.read().split("\n")
-
-        # find player
-        for x in file:
-            if "P" in x:
-                playerPos = (file.index(x), [i for i in x].index("P"))
-
-        for y in range(len(file)):
-            for x in range(len(file[y])):
-                if file[y][x] == "L":
-                    self.ld.append((x - playerPos[0], y - playerPos[1]))
-
-        for y in range(len(file)):
-            for x in range(len(file[y])):
-                if file[y][x] == "M":
-                    self.md.append((x - playerPos[0], y - playerPos[1]))
-
-        for y in range(len(file)):
-            for x in range(len(file[y])):
-                if file[y][x] == "H":
-                    self.hd.append((x - playerPos[0], y - playerPos[1]))
-        f.close()
-
-        f = open(self.df + "move.dat")
-        file = f.read().split("\n")
-
-        self.moves = diction(())
-        nums = [str(x) for x in range(10)]
-
-        for y in range(len(file)):
-            for x in range(len(file[y])):
-                if file[y][x] in nums:
-                    self.moves.append(int(file[y][x]), (x, y))
-
-        f.close()
-
-        self.aa = self.ld + self.md + self.hd # attack area
-
-    def attack(self, player):
-        rl = (self.pos[x]-player.pos[x] for x in range(2)) # relative location
-        if rl in self.aa:
-            if rl in self.ld:
-                player.dd(self.lvl*0.2)
-            if rl in self.md:
-                player.dd(self.lvl*0.4)
-            if rl in self.hd:
-                player.dd(self.lvl*0.7)
-            else:
-                print("error")
-
-    def mMove(self, collisionMap, player):
-        if (self.pos[0]-player.pos[0], self.pos[1]-player.pos[1]):
-            self.attack(player)
-        pass
-"""
