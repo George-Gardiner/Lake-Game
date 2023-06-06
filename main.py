@@ -33,10 +33,7 @@ keys = {
 }
 downKeys = []
 book = journal(sd)
-book.addPage("1")
-book.addPage("2")
-book.addPage("3")
-book.addPage("4")
+book.addPage("find the missing pages (total of 5)")
 player = animation((sd[0] / 2 - sd[0] / 10, sd[1] / 2 - sd[0] / 10), "pDat/MC/IMG/IDLE", (sd[0] / 5, sd[1] / 5), mfps)
 
 # setup pygame
@@ -140,12 +137,28 @@ cm = cmo("1")
 
 #                more vars and objects
 #         collectables
-def collect():
-    book.addPage("HAHAFOUNDME")
+def collect1():
+    book.addPage("1:3")
+    return False
+def collect2():
+    book.addPage("2:1")
+    return False
+def collect3():
+    book.addPage("1:3")
+    return False
+def collect4():
+    book.addPage("1:3")
+    return False
+def collect5():
+    book.addPage("1:3")
     return False
 
 
-Rs = [collectable((1, 6), "bookDat/paper.png", ts, mfps, collect)]
+Rs = [collectable((1, 6), "bookDat/paper.png", ts, mfps, collect1)]
+Rs.append(collectable((7, 4), "bookDat/paper.png", ts, mfps, collect2))
+Rs.append(collectable((10, 10), "bookDat/paper.png", ts, mfps, collect3))
+Rs.append(collectable((20, 4), "bookDat/paper.png", ts, mfps, collect2))
+Rs.append(collectable((20, 4), "bookDat/paper.png", ts, mfps, collect2))
 
 mainGame()
 
