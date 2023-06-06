@@ -130,10 +130,10 @@ def mainGame():  # put char movement here
 
 #                create map
 mp.init(sd, mfps, ts)
-maps.append(mo("2-0", [-2, 0]))
-maps.append(mo("2-1", [-2, 0]))
+maps.append(mo("1-0", [-2, 0]))
+maps.append(mo("1-1", [-2, 0]))
 gms = maps[0].getgms()
-cm = cmo("map")
+cm = cmo("1")
 
 
 
