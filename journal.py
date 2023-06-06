@@ -3,7 +3,6 @@ from pygame import font as f
 
 f.init()
 font = f.Font('freesansbold.ttf', 32)
-var = 0
 
 
 class journal(sprite):
@@ -22,22 +21,14 @@ class journal(sprite):
         self.pages[self.currentPage].draw(bg)
 
     def fp(self, pos):  # flipPage
-        global var
-        var += 1
-        print(var)
         if pos:  # positive
-            print(pos, "::", var)
             self.currentPage += 1
             if self.currentPage > len(self.pages) - 1:
-                print("UpperLimitTriggered")
                 self.currentPage = len(self.pages) - 2
         else:
             self.currentPage -= 1
             if self.currentPage < 0:
-                print("LowerLimitTriggered")
                 self.currentPage = 0
-        print(self.currentPage, ":: Page")
-        print(len(self.pages), ":: LEN")
 
 
 class page():

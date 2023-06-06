@@ -144,7 +144,7 @@ def collect():
     return False
 
 
-Rs = [collectable((5, 6), "mapDat/imgs/1/!", ts, mfps, collect)]
+Rs = [collectable((5, 6), "bookDat/paper.png", ts, mfps, collect)]
 
 mainGame()
 
