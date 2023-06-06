@@ -132,6 +132,7 @@ def mainGame():  # put char movement here
 mp.init(sd, mfps, ts)
 maps.append(mo("1-0", [-2, 0]))
 maps.append(mo("1-1", [-2, 0]))
+maps.append(mo("1-2", [-2, 0]))
 gms = maps[0].getgms()
 cm = cmo("1")
 
@@ -144,7 +145,7 @@ def collect():
     return False
 
 
-Rs = [collectable((5, 6), "bookDat/paper.png", ts, mfps, collect)]
+Rs = [collectable((1, 6), "bookDat/paper.png", ts, mfps, collect)]
 
 mainGame()
 
