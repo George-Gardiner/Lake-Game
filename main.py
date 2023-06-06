@@ -136,8 +136,6 @@ gms = maps[0].getgms()
 cm = cmo("map")
 
 
-# for map in maps:
-#  map.ml(2)
 
 #                more vars and objects
 #         collectables
