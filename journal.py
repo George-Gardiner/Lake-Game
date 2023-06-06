@@ -15,6 +15,7 @@ class journal(sprite):
     def addPage(self, text):
         self.pages.append(page(text, self.sd))
         self.pages.append(page("buffer", self.sd))
+        self.pages.append(page("buffer", self.sd))
 
     def draw(self, bg):
         super().draw(bg)
@@ -24,11 +25,12 @@ class journal(sprite):
         if pos:  # positive
             self.currentPage += 1
             if self.currentPage > len(self.pages) - 1:
-                self.currentPage = len(self.pages) - 2
+                self.currentPage = len(self.pages) - 3
         else:
             self.currentPage -= 1
             if self.currentPage < 0:
                 self.currentPage = 0
+        print(self.currentPage, "/", len(self.pages))
 
 
 class page():
