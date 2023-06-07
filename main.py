@@ -144,21 +144,21 @@ def collect2():
     book.addPage("2:1")
     return False
 def collect3():
-    book.addPage("1:3")
+    book.addPage("3:2")
     return False
 def collect4():
-    book.addPage("1:3")
+    book.addPage("4:2")
     return False
 def collect5():
-    book.addPage("1:3")
+    book.addPage("5:1")
     return False
 
 
-Rs = [collectable((1, 6), "bookDat/paper.png", ts, mfps, collect1)]
-Rs.append(collectable((7, 4), "bookDat/paper.png", ts, mfps, collect2))
-Rs.append(collectable((10, 10), "bookDat/paper.png", ts, mfps, collect3))
-Rs.append(collectable((20, 4), "bookDat/paper.png", ts, mfps, collect2))
-Rs.append(collectable((20, 4), "bookDat/paper.png", ts, mfps, collect2))
+Rs = [collectable((1, 6), "bookDat/paper.png", ts, mfps, collect1),
+      collectable((7, 4), "bookDat/paper.png", ts, mfps, collect2),
+      collectable((8, 13), "bookDat/paper.png", ts, mfps, collect3),
+      collectable((15, 1), "bookDat/paper.png", ts, mfps, collect4),
+      collectable((14, 8), "bookDat/paper.png", ts, mfps, collect5)]
 
 mainGame()
 
