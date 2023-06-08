@@ -121,6 +121,7 @@ def mainGame():  # put char movement here
 
         player.update(fc)
         player.draw(bg)
+        maps[1].draw(bg, fc)
 
         mainGameKeyBinds()
 
