@@ -140,15 +140,19 @@ cm = cmo("1")
 def collect1():
     book.addPage("1:3")
     return False
+
 def collect2():
     book.addPage("2:1")
     return False
+
 def collect3():
     book.addPage("3:2")
     return False
+
 def collect4():
     book.addPage("4:2")
     return False
+
 def collect5():
     book.addPage("5:1")
     return False
