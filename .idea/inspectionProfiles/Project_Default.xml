@@ -9,6 +9,7 @@
           <option value="N801" />
           <option value="N803" />
           <option value="N806" />
+          <option value="N813" />
         </list>
       </option>
     </inspection_tool>
@@ -24,6 +25,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="list.sety" />
+          <option value="int.move" />
         </list>
       </option>
     </inspection_tool>
