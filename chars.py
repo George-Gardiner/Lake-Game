@@ -40,7 +40,7 @@ class sprite:
     def draw(self, bg):
         bg.blit(self.img, (self.pos[0], self.pos[1]))
 
-    def mDraw(self, bg, additive=None):  # alsmost the same as above, but could nessesary for the SPEEEEEEEEED
+    def mDraw(self, bg, additive=None):  # almost the same as above, but could necessary for the SPEEEEEEEEED
         if additive is None:
             additive = 0, 0
         bg.blit(self.img, (self.pos[0] + additive[0], self.pos[1] + additive[1]))
