@@ -8,19 +8,6 @@ from math import floor as rd  # round down
 from math import fabs as abs
 from wgs import inSquare as iS
 
-"""
-     #   if(event.type == pygame.KEYDOWN):
-        #    if(event.key == pygame.K_LEFT):
-         #       x_2 = -10 # is this momentum or something?
-          #      y_2 = 0
-           # elif(event.key == pygame.K_RIGHT):
-            #    x_2 = 10
-             #   y_2 = 0
-            #elif(event.key == pygame.K_UP):
-             #   x_2 = 0
-              #  y_2 = 10
-"""
-
 
 class sprite:
     def __init__(self, pos, img, dim):
