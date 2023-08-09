@@ -121,6 +121,11 @@ class collectable(animatedSprite):
                 self.col = False
 
 
+class interactable(collectable):
+    pass
+
+
+
 # unfinished:________________________________________________________________________________________________________________________
 class btn(sprite):
     def __init__(self, startPos, endPos, img):

@@ -4,7 +4,7 @@ Copywrite, Copywrite, yada yada yada"""
 import pygame as pg
 from time import time as t
 import math as pain
-# import winsound <-- might be a problem?
+import winsound
 from chars import *
 from map import mo, cmo
 import map as mp
