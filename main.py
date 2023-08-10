@@ -12,10 +12,10 @@ from journal import journal
 
 # vars
 running = True
-sd = 500, 500 # screen dimensions (x, y) || 80, 80 or multiple of is best
+sd = 500, 500 # screen dimensions (x, y) || 80, 80 or multiple of 80 is best
 lf = t()  # last frame
 fc = 0  # frame count
-maps = []  # map1: main, map2: collision...
+maps = []  # map0: base, map1: outlines, map2: details...
 ts = (sd[0] / 5, sd[1] / 5)  # tile size
 currentMap = 0, 0  # x, y (ts(tile size), not pxs(pixel size))
 mfps = 24  # max fps
@@ -71,13 +71,6 @@ def generalMainLoop():
     fc += 1
 
 
-def chooseSave():
-    global running
-
-    while running:
-        generalMainLoop()
-
-
 def menu():
     global running
 
@@ -127,9 +120,10 @@ def mainGame():  # put char movement here
 
 #                create map
 mp.init(sd, mfps, ts)
-maps.append(mo("1-0", [-2, 0]))
-maps.append(mo("1-1", [-2, 0]))
-maps.append(mo("1-2", [-2, 0]))
+#maps.append(mo("1-0", [-2, 0]))
+#maps.append(mo("1-1", [-2, 0]))
+#maps.append(mo("1-2", [-2, 0]))
+maps.append(mo("Final", [0, 0]))
 gms = maps[0].getgms()
 cm = cmo("1")
 
