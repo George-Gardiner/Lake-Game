@@ -1,5 +1,3 @@
-"""Recycled Code from LaiND (name subject to change) by George, also modified with comments"""
-
 from pygame.image import load as li  # load image
 from pygame.transform import scale as si  # scale image
 from wgs import rf  # read file
