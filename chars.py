@@ -78,7 +78,7 @@ class animatedSprite(animation, sprite):
             super().update(frame)
 
 
-class collectable(animatedSprite):
+class collectable(animatedSprite): #sai
     def __init__(self, pos, img, ts, mfps, fun, fipn=None, size=None):
         self.exists = True
         if size is None:
@@ -104,9 +104,21 @@ class collectable(animatedSprite):
                     self.exists = False
             else:
                 self.col = False
-
-
-class interactable(collectable):
+'''           
+class Collectible: 
+    def __init__(self,x1,x2,y1,y2,x,y): 
+        self.shape = pygame.Rect(x1,x2,y1,y2)
+        self.shape.x = x
+        self.shape.y = y
+    def update(self):
+        self.shape.x = -100
+        self.shape.y = -100
+        c1 = Collectible(0, 0, 20, 20, random.randint(0, 640),random.randint(0, 480));
+        pygame.draw.rect(screen, (255, 0, 0), c1.shape)
+    if sprite.colliderect(c1.shape):
+        c1.update()
+'''    
+class interactable(collectable): #sai
     pass
 
 
