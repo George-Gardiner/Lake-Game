@@ -8,7 +8,7 @@ from math import floor as rd  # round down
 from math import fabs as abs
 from wgs import inSquare as iS
 
-
+#this is a change
 class sprite:
     def __init__(self, pos, img, dim):
         self.pos = pos
