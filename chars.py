@@ -118,8 +118,7 @@ class Collectible:
     if sprite.colliderect(c1.shape):
         c1.update()
 '''    
-class interactable(collectable): #sai
-    pass
+
 
 
 
