@@ -33,7 +33,7 @@ class journal(sprite):
         print(self.currentPage, "/", len(self.pages))
 
 
-class page():
+class page:
     def __init__(self, text, sd):
         self.text = []
         for x in text.split("\n"):
