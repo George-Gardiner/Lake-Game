@@ -8,11 +8,12 @@ from chars import *
 from map import mo, cmo
 import map as mp
 from colors import lightGrey
-from journal import journal
+from journal import journal, init
 
 # vars
 running = True
 sd = 1500, 1500 # screen dimensions (x, y) || 80, 80 or multiple of 80 is best
+init(sd)
 lf = t()  # last frame
 fc = 0  # frame count
 maps = []  # map0: base, map1: outlines, map2: details...

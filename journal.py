@@ -1,8 +1,13 @@
 from chars import sprite
 from pygame import font as f
 
-f.init()
-font = f.Font('freesansbold.ttf', 32)
+font = None
+
+
+def init(sd):
+    global font
+    f.init()
+    font = f.Font('freesansbold.ttf', sd[0]/25)
 
 
 class journal(sprite):
