@@ -7,7 +7,7 @@ font = None
 def init(sd):
     global font
     f.init()
-    font = f.Font('freesansbold.ttf', sd[0]/25)
+    font = f.Font('freesansbold.ttf', int(sd[0]/25))
 
 
 class journal(sprite):
