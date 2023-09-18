@@ -38,10 +38,9 @@ class page():
         self.text = []
         for x in text.split("\n"):
             self.text.append(font.render(x, True, (0, 0, 0)))
-        #self.textRect.center = sd[0] / 2, sd[1] / 2
 
     def draw(self, sd):
         y = 0
         for x in range(len(self.text)):
             sd.blit(self.text[x], (0, y))
-            y+=20
+            y += 20
