@@ -35,9 +35,13 @@ class journal(sprite):
 
 class page():
     def __init__(self, text, sd):
-        self.text = font.render(text, True, (0, 0, 0))
-        self.textRect = self.text.get_rect()
-        self.textRect.center = sd[0] / 2, sd[1] / 2
+        self.text = []
+        for x in text.split("\n"):
+            self.text.append(font.render(x, True, (0, 0, 0)))
+        #self.textRect.center = sd[0] / 2, sd[1] / 2
 
     def draw(self, sd):
-        sd.blit(self.text, self.textRect)
+        y = 0
+        for x in range(len(self.text)):
+            sd.blit(self.text[x], (0, y))
+            y+=20

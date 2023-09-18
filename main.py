@@ -12,7 +12,7 @@ from journal import journal
 
 # vars
 running = True
-sd = 500, 500 # screen dimensions (x, y) || 80, 80 or multiple of 80 is best
+sd = 1500, 1500 # screen dimensions (x, y) || 80, 80 or multiple of 80 is best
 lf = t()  # last frame
 fc = 0  # frame count
 maps = []  # map0: base, map1: outlines, map2: details...
@@ -131,7 +131,7 @@ cm = cmo("1")
 #                more vars and objects
 #         collectables
 def collect1():
-    book.addPage("1:3")
+    book.addPage("Organic trash is any waste that comes from living organisms, such as food scraps,\nyard waste, and animal droppings. Organic trash can be composted to produce fertilizer for plants.")
     return False
 
 def collect2():
