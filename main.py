@@ -34,7 +34,7 @@ keys = {
 downKeys = []
 book = journal(sd)
 #book.addPage("find the missing pages (total of 5)")
-book.addPage(len("32 characters per line. 012345678901234567890123"))
+book.addPage("32 characters per line. 012345678901234567890123")
 player = animation((sd[0] / 2 - sd[0] / 10, sd[1] / 2 - sd[0] / 10), "pDat/MC/IMG/IDLE", (sd[0] / 5, sd[1] / 5), mfps)
 
 # setup pygame
