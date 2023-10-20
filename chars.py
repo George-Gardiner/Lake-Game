@@ -104,37 +104,6 @@ class collectable(animatedSprite): #sai
                     self.exists = False
             else:
                 self.col = False
-'''           
-class Collectible: 
-    def __init__(self,x1,x2,y1,y2,x,y): 
-        self.shape = pygame.Rect(x1,x2,y1,y2)
-        self.shape.x = x
-        self.shape.y = y
-    def update(self):
-        self.shape.x = -100
-        self.shape.y = -100
-        c1 = Collectible(0, 0, 20, 20, random.randint(0, 640),random.randint(0, 480));
-        pygame.draw.rect(screen, (255, 0, 0), c1.shape)
-    if sprite.colliderect(c1.shape):
-        c1.update()
-'''    
-
-
-
-
-# unfinished:________________________________________________________________________________________________________________________
-class btn(sprite):
-    def __init__(self, startPos, endPos, img):
-        super().__init__(startPos, img, (endPos[0] - startPos[0], endPos[1] - startPos[1]))
-        self.collision, self.scp, self.ecp = [startPos,
-                                              endPos], startPos, endPos  # start collision position, end collision position
-
-    def isPressed(self, mousePos):
-        if iS(mousePos[0], mousePos[1], self.scp, self.ecp):
-            return True
-        return False
-
-# ___________________________________________________________________________________________________________________________________
 
 
 class char(sprite):
@@ -157,10 +126,3 @@ class char(sprite):
 
         else:
             self.setImg(self.imgFile + dir, self.ts)
-
-
-class player(char):
-    def __init__(self, ts, sp=None):
-        if sp is None:
-            sp = 0, 0
-        self.pos = sp  # tile location, not pixel location
