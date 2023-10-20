@@ -90,22 +90,6 @@ class mo:  # map object
             return ""
         return ".png"
 
-    """ update with init when done
-    def newMap(self, map, sd, mapKey=None):  # sd = screen dimensions
-        if mapKey is None:
-            mapKey = mk
-        self.map = open("imgs/maps/"+map+".dat").read().split("\n")
-        self.mapList = [[x for x in y] for y in open("imgs/maps/"+map+".dat").read().split("\n")]
-        self.dim = (len(self.mapList), len(self.mapList[0]))
-        self.squareSize = [div(sd[0], self.dim[0]), div(sd[1], self.dim[1])]
-        self.tL = [ # tile list
-            [sprite([x*self.squareSize[0]*0.98, y*self.squareSize[1]*0.98],
-                    mapKey[self.map[y][x]],
-                    (self.squareSize[0], self.squareSize[1]))
-             for x in range(len(self.map[y]))]
-            for y in range(len(self.map))] # tile list
-"""
-
     def draw(self, screen, frame):
         location = self.location
         for y in self.tL:
