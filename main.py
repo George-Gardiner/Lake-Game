@@ -34,7 +34,7 @@ keys = {
 downKeys = []
 book = journal(sd)
 #book.addPage("find the missing pages (total of 5)")
-book.addPage(len("32 characters per line. 012345678901234567890123"))
+book.addPage("32 characters per line. 012345678901234567890123")
 player = animation((sd[0] / 2 - sd[0] / 10, sd[1] / 2 - sd[0] / 10), "pDat/MC/IMG/IDLE", (sd[0] / 5, sd[1] / 5), mfps)
 
 # setup pygame
@@ -153,11 +153,11 @@ def collect5():
     return False
 
 
-Rs = [collectable((1, 6), "bookDat/paper.png", ts, mfps, collect1),
-      collectable((7, 4), "bookDat/paper.png", ts, mfps, collect2),
-      collectable((8, 13), "bookDat/paper.png", ts, mfps, collect3),
-      collectable((15, 1), "bookDat/paper.png", ts, mfps, collect4),
-      collectable((14, 8), "bookDat/paper.png", ts, mfps, collect5)]
+Rs = [collectable((1, 6), "mapDat/imgs/TrashImgs/TrashA.png", ts, mfps, collect1),
+      collectable((7, 4), "mapDat/imgs/TrashImgs/TrashB.png", ts, mfps, collect2),
+      collectable((8, 13), "mapDat/imgs/TrashImgs/TrashC.png", ts, mfps, collect3),
+      collectable((15, 1), "mapDat/imgs/TrashImgs/TrashD.png", ts, mfps, collect4),
+      collectable((14, 8), "mapDat/imgs/TrashImgs/TrashE.png", ts, mfps, collect5)]
 
 mainGame()
 
