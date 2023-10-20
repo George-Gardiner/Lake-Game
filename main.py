@@ -12,7 +12,7 @@ from journal import journal, init
 
 # vars
 running = True
-sd = 1500, 1500 # screen dimensions (x, y) || 80, 80 or multiple of 80 is best
+sd = 240, 240 # screen dimensions (x, y) || 80, 80 or multiple of 80 is best
 init(sd)
 lf = t()  # last frame
 fc = 0  # frame count
